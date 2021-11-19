@@ -1,0 +1,72 @@
+dsconfig create-virtual-attribute \
+      --name "pdadmingrp privileges" \
+      --type "user-defined" \
+          --set "description":"Assigning ds-privileges to pdadmingrp users" \
+          --set "enabled":"true" \
+          --set "attribute-type":"ds-privilege-name" \
+          --set "group-dn":"cn=pdadmingrp,ou=groups,o=platformconfig" \
+          --set "value":"backend-backup" \
+          --set "value":"backend-restore" \
+          --set "value":"config-read" \
+          --set "value":"config-write" \
+          --set "value":"disconnect-client" \
+          --set "value":"ldif-export" \
+          --set "value":"ldif-import" \
+          --set "value":"modify-acl" \
+          --set "value":"password-reset" \
+          --set "value":"server-restart" \
+          --set "value":"server-shutdown" \
+          --set "value":"unindexed-search" \
+          --set "value":"update-schema"
+dsconfig create-virtual-attribute \
+      --name "pdsreadmingrp privileges" \
+      --type "user-defined" \
+          --set "description":"Assigning ds-privileges to pdsreadmingrp users" \
+          --set "enabled":"true" \
+          --set "attribute-type":"ds-privilege-name" \
+          --set "group-dn":"cn=pdsreadmingrp,ou=groups,o=platformconfig" \
+          --set "value":"password-reset"
+dsconfig create-virtual-attribute \
+      --name "configRead privileges" \
+      --type "user-defined" \
+          --set "description":"Assigning ds-privileges to configRead group users" \
+          --set "enabled":"true" \
+          --set "attribute-type":"ds-privilege-name" \
+          --set "group-dn":"cn=configRead,ou=groups,o=platformconfig" \
+          --set "value":"config-read"
+dsconfig create-virtual-attribute \
+      --name "configWrite privileges" \
+      --type "user-defined" \
+          --set "description":"Assigning ds-privileges to configWrite group users" \
+          --set "enabled":"true" \
+          --set "attribute-type":"ds-privilege-name" \
+          --set "group-dn":"cn=configWrite,ou=groups,o=platformconfig" \
+          --set "value":"config-read" \
+          --set "value":"config-write" \
+          --set "value":"modify-acl" \
+          --set "value":"update-schema"
+dsconfig create-virtual-attribute \
+      --name "passwordReset privilege" \
+      --type "user-defined" \
+        --set "description":"Assigning ds-privileges to passwordReset group users" \
+        --set "enabled":"true" \
+        --set "attribute-type":"ds-privilege-name" \
+        --set "group-dn":"cn=passwordReset,ou=groups,o=platformconfig" \
+        --set "value":"password-reset"
+dsconfig create-virtual-attribute \
+      --name "proxiedAuth privilege" \
+      --type "user-defined" \
+        --set "description":"Assigning ds-privileges to proxiedAuth group users" \
+        --set "enabled":"true" \
+        --set "attribute-type":"ds-privilege-name" \
+        --set "group-dn":"cn=proxiedAuth,ou=groups,o=platformconfig" \
+        --set "value":"proxied-auth"
+dsconfig create-virtual-attribute \
+      --name "unindexedSearch privilege" \
+      --type "user-defined" \
+        --set "description":"Assigning ds-privileges to unindexedSearch group users" \
+        --set "enabled":"true" \
+        --set "attribute-type":"ds-privilege-name" \
+        --set "group-dn":"cn=unindexedSearch,ou=groups,o=platformconfig" \
+        --set "value":"unindexed-search"
+

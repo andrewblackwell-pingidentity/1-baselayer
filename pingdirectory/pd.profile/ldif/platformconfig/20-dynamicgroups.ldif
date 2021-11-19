@@ -1,0 +1,31 @@
+# Author Andy Blackwell
+# 20210927. Date 22 Apr 2021
+# 20210927 - This was originally in 05-dynamicgroups.ldif (found in file dated 20210422) but has since been deleted so now in its own file.
+#
+dn: cn=passwordReset,ou=groups,o=platformconfig
+objectClass: groupOfURLs
+objectClass: top
+cn: passwordReset
+ou: groups
+memberURL: ldap:///o=platformconfig??sub?(title=passwordReset)
+
+dn: cn=pdDitObjectAdmin,ou=groups,o=platformconfig
+objectClass: groupOfURLs
+objectClass: top
+cn: pdDitObjectAdmin
+ou: groups
+memberURL: ldap:///o=platformconfig??sub?(title=pdDitObjectAdmin)
+
+dn: cn=proxiedAuth,ou=groups,o=platformconfig
+objectClass: groupOfURLs
+objectClass: top
+cn: proxiedAuth
+ou: groups
+memberURL: ldap:///o=platformconfig??sub?(title=proxiedAuth)
+
+dn: cn=unindexedSearch,ou=groups,o=platformconfig
+objectClass: groupOfURLs
+objectClass: top
+cn: unindexedSearch
+ou: groups
+memberURL: ldap:///o=platformconfig??sub?(title=unindexedSearch)
